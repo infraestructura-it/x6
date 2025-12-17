@@ -119,7 +119,7 @@
         "type": "ui-group",
         "name": "Group 1",
         "page": "d0df467bc6420be0",
-        "width": 6,
+        "width": 3,
         "height": 1,
         "order": 1,
         "showTitle": true,
@@ -133,7 +133,7 @@
         "type": "ui-group",
         "name": "Group 2",
         "page": "d0df467bc6420be0",
-        "width": 6,
+        "width": 2,
         "height": 1,
         "order": 2,
         "showTitle": true,
@@ -183,7 +183,7 @@
         "type": "ui-group",
         "name": "Group 3",
         "page": "1e6367e45d9fc8ae",
-        "width": 6,
+        "width": 4,
         "height": 1,
         "order": 1,
         "showTitle": true,
@@ -197,7 +197,7 @@
         "type": "ui-group",
         "name": "Group 4",
         "page": "1e6367e45d9fc8ae",
-        "width": 6,
+        "width": 4,
         "height": 1,
         "order": 2,
         "showTitle": true,
@@ -350,6 +350,36 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "b2ac5490d830987f",
+        "type": "ui-spacer",
+        "group": "2146960fc34ca53c",
+        "name": "spacer",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "b2ac8d2401429b07",
+        "type": "ui-spacer",
+        "group": "94ebc76ded6ad8da",
+        "name": "spacer",
+        "order": 9,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "b2ac8bd0f35ba1aa",
+        "type": "ui-spacer",
+        "group": "60b6872ea35bde95",
+        "name": "spacer",
+        "order": 9,
+        "width": 1,
+        "height": 1,
+        "className": ""
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -949,7 +979,7 @@
             "#e5e5e5"
         ],
         "gridColorDefault": true,
-        "width": 6,
+        "width": 5,
         "height": 8,
         "className": "",
         "interpolation": "linear",
@@ -1153,8 +1183,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 110,
-        "y": 120,
+        "x": 150,
+        "y": 160,
         "wires": [
             []
         ]
