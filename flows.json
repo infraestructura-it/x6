@@ -8,6 +8,298 @@
         "env": []
     },
     {
+        "id": "ba42437b28154c5b",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f5644fdd1d7bfc30",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "cd2f719bed46687c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6fc3b70b309d10cd",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "1222124a41447e8c",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "ab7945c408736905",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "6fc3b70b309d10cd",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1222124a41447e8c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "92a01b90285fa360",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "ab7945c408736905",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b13a130fb37332ae",
+        "type": "ui-page",
+        "name": "Page 2",
+        "ui": "6fc3b70b309d10cd",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1222124a41447e8c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "6ca9d64056edf711",
+        "type": "ui-page",
+        "name": "Page Name",
+        "ui": "6fc3b70b309d10cd",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "notebook",
+        "theme": "ec7cd1ea219f0161",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6ac8e1c89e47071c",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "6ca9d64056edf711",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0dc96a5a5289d134",
+        "type": "ui-group",
+        "name": "Group 3",
+        "page": "b13a130fb37332ae",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
+        "id": "84b53e0c750d7f88",
+        "type": "ui-group",
+        "name": "Group 4",
+        "page": "6ca9d64056edf711",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ec7cd1ea219f0161",
+        "type": "ui-theme",
+        "name": "Theme Name",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#b05454",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
         "id": "f072b88960ff2b5e",
         "type": "inject",
         "z": "e9e4fffeac32751c",
@@ -94,36 +386,432 @@
         "type": "mqtt in",
         "z": "e9e4fffeac32751c",
         "name": "",
-        "topic": "",
+        "topic": "control1",
         "qos": "2",
         "datatype": "auto-detect",
+        "broker": "cd2f719bed46687c",
         "nl": false,
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 290,
-        "y": 340,
+        "x": 330,
+        "y": 380,
         "wires": [
-            [
-                "1b1977039ce1a7a9"
-            ]
+            []
         ]
     },
     {
         "id": "1b1977039ce1a7a9",
         "type": "mqtt out",
         "z": "e9e4fffeac32751c",
-        "name": "",
-        "topic": "",
-        "qos": "",
+        "name": "c1",
+        "topic": "control1",
+        "qos": "1",
         "retain": "",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
         "correl": "",
         "expiry": "",
+        "broker": "cd2f719bed46687c",
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e64a65396fdb3ec4",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "f85e710cc0ded35c"
+            ]
+        ]
+    },
+    {
+        "id": "b4463119ba744ea0",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "l2",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "3e4236f7d7f39e8c"
+            ]
+        ]
+    },
+    {
+        "id": "66fcfcc21aabd4a1",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "i3",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "e84c7d477599f805"
+            ]
+        ]
+    },
+    {
+        "id": "d3a9600e5eb5104a",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "l4",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 360,
+        "wires": [
+            [
+                "ea9da93f82adc3db"
+            ]
+        ]
+    },
+    {
+        "id": "5ec80970224456a2",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "l5",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "1257bfceb0be4dfd"
+            ]
+        ]
+    },
+    {
+        "id": "7b717e4af86b0a11",
+        "type": "ui-switch",
+        "z": "ba42437b28154c5b",
+        "name": "l6",
+        "label": "switch",
+        "group": "92a01b90285fa360",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "7fa289c6215da58f"
+            ]
+        ]
+    },
+    {
+        "id": "f85e710cc0ded35c",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "l1",
+        "group": "6ac8e1c89e47071c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 630,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3e4236f7d7f39e8c",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "l2",
+        "group": "92a01b90285fa360",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 610,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e84c7d477599f805",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "l3",
+        "group": "92a01b90285fa360",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 610,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ea9da93f82adc3db",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "i4",
+        "group": "92a01b90285fa360",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
         "x": 610,
         "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1257bfceb0be4dfd",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "l5",
+        "group": "92a01b90285fa360",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 610,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "7fa289c6215da58f",
+        "type": "ui-led",
+        "z": "ba42437b28154c5b",
+        "name": "l6",
+        "group": "92a01b90285fa360",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 610,
+        "y": 520,
         "wires": []
     }
 ]
