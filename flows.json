@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "84e5453dc2fdf863",
+        "type": "tab",
+        "label": "Flujo 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "a65f1e263306255b",
         "type": "ui-base",
         "name": "My Dashboard",
@@ -1203,8 +1211,8 @@
         "correl": "",
         "expiry": "",
         "broker": "bb62a1d78ecabbf4",
-        "x": 430,
-        "y": 200,
+        "x": 410,
+        "y": 100,
         "wires": []
     }
 ]
