@@ -2,7 +2,10 @@
     "name": "z1",
     "description": "pruebas ",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "@flowfuse/node-red-dashboard": "1.30.0",
+        "node-red-contrib-ui-led": "0.4.11"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
