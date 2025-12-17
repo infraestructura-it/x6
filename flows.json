@@ -32,6 +32,14 @@
         "env": []
     },
     {
+        "id": "1f94d9dd28469bca",
+        "type": "tab",
+        "label": "Flujo 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "a65f1e263306255b",
         "type": "ui-base",
         "name": "My Dashboard",
@@ -311,6 +319,37 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "bb62a1d78ecabbf4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -1100,5 +1139,42 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "2f6f39ce5b95ea37",
+        "type": "mqtt in",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb62a1d78ecabbf4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8340599757309efb",
+        "type": "mqtt out",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb62a1d78ecabbf4",
+        "x": 430,
+        "y": 200,
+        "wires": []
     }
 ]
