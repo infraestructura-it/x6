@@ -1237,43 +1237,6 @@
         ]
     },
     {
-        "id": "2f6f39ce5b95ea37",
-        "type": "mqtt in",
-        "z": "1f94d9dd28469bca",
-        "name": "",
-        "topic": "",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "bb62a1d78ecabbf4",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 1,
-        "x": 230,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8340599757309efb",
-        "type": "mqtt out",
-        "z": "1f94d9dd28469bca",
-        "name": "",
-        "topic": "encender",
-        "qos": "0",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "bb62a1d78ecabbf4",
-        "x": 460,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "9e4f8e3a9ac82740",
         "type": "aedes broker",
         "z": "1f94d9dd28469bca",
@@ -1294,8 +1257,192 @@
         "x": 150,
         "y": 100,
         "wires": [
-            [],
-            []
+            [
+                "2bb5fcf43cb8a7bf"
+            ],
+            [
+                "3d0c0af69e89b1ce"
+            ]
+        ]
+    },
+    {
+        "id": "2bb5fcf43cb8a7bf",
+        "type": "debug",
+        "z": "1f94d9dd28469bca",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3d0c0af69e89b1ce",
+        "type": "debug",
+        "z": "1f94d9dd28469bca",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2e0acc242a15e5d1",
+        "type": "mqtt in",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "topic": "encender",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb62a1d78ecabbf4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "a6d76b20f18c66b9",
+                "0501d70edce135f0"
+            ]
+        ]
+    },
+    {
+        "id": "6d1d2ca0fac043d6",
+        "type": "mqtt out",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "topic": "encender",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb62a1d78ecabbf4",
+        "x": 340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "addc595cb015c195",
+        "type": "inject",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "6d1d2ca0fac043d6"
+            ]
+        ]
+    },
+    {
+        "id": "a6d76b20f18c66b9",
+        "type": "debug",
+        "z": "1f94d9dd28469bca",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0501d70edce135f0",
+        "type": "ui-led",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "group": "bd887308561d1dee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 810,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8ba165b2fc31e389",
+        "type": "inject",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "6d1d2ca0fac043d6"
+            ]
         ]
     },
     {
@@ -1474,7 +1621,7 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "group": "bd887308561d1dee",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "",
@@ -1523,7 +1670,7 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "group": "bd887308561d1dee",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "",
