@@ -398,6 +398,56 @@
         "className": ""
     },
     {
+        "id": "c072b84bbe9f58bd",
+        "type": "ui-page",
+        "name": "Page 5",
+        "ui": "a65f1e263306255b",
+        "path": "/page5",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ac7a2988612b2fd0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bd887308561d1dee",
+        "type": "ui-group",
+        "name": "Group 8",
+        "page": "c072b84bbe9f58bd",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "ddfa6ad641de26b2",
         "type": "ui-switch",
         "z": "216a3e955e6e9f1e",
@@ -1287,6 +1337,294 @@
         "wires": [
             [
                 "86a92c9d03b51f82"
+            ]
+        ]
+    },
+    {
+        "id": "53426ccc33657e1c",
+        "type": "DuloNodeHub",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "installation": "standalone",
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "1b10f19ccbf665d4"
+            ]
+        ]
+    },
+    {
+        "id": "1b10f19ccbf665d4",
+        "type": "DuloNodeDevice",
+        "z": "49868e9529ec35fd",
+        "name": "x",
+        "deviceType": "light",
+        "x": 510,
+        "y": 580,
+        "wires": [
+            [
+                "6e5a446287c0cb9a",
+                "e9e99b39c684099d"
+            ]
+        ]
+    },
+    {
+        "id": "9fb415379da76c35",
+        "type": "DuloNodeHub",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "42afca47339b6509"
+            ]
+        ]
+    },
+    {
+        "id": "42afca47339b6509",
+        "type": "DuloNodeDevice",
+        "z": "49868e9529ec35fd",
+        "name": "Demo Device",
+        "deviceType": "fan",
+        "x": 680,
+        "y": 700,
+        "wires": [
+            [
+                "d30208141dbf5c71",
+                "f0fad7a13454cf83"
+            ]
+        ]
+    },
+    {
+        "id": "d30208141dbf5c71",
+        "type": "debug",
+        "z": "49868e9529ec35fd",
+        "name": "Device Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "78405b0b42d8bf9a",
+        "type": "inject",
+        "z": "49868e9529ec35fd",
+        "name": "Hub Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 300,
+        "y": 800,
+        "wires": [
+            [
+                "9fb415379da76c35"
+            ]
+        ]
+    },
+    {
+        "id": "f0fad7a13454cf83",
+        "type": "ui-led",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "group": "bd887308561d1dee",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 910,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6e5a446287c0cb9a",
+        "type": "debug",
+        "z": "49868e9529ec35fd",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e9e99b39c684099d",
+        "type": "ui-led",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "group": "bd887308561d1dee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [
+            {
+                "value": "false",
+                "valueType": "bool",
+                "color": "#ff0000"
+            },
+            {
+                "value": "true",
+                "valueType": "bool",
+                "color": "#00ff00"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showBorder": true,
+        "showGlow": true,
+        "x": 750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "fec52bb0093ddfb7",
+        "type": "inject",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "53426ccc33657e1c"
+            ]
+        ]
+    },
+    {
+        "id": "79cca395d543f560",
+        "type": "amazon-echo-device",
+        "z": "49868e9529ec35fd",
+        "name": "x1",
+        "topic": "encender",
+        "x": 590,
+        "y": 920,
+        "wires": [
+            [
+                "632b7498ec80ec71"
+            ]
+        ]
+    },
+    {
+        "id": "894fe516b026c30a",
+        "type": "amazon-echo-hub",
+        "z": "49868e9529ec35fd",
+        "port": "8080",
+        "processinput": "3",
+        "discovery": true,
+        "x": 390,
+        "y": 920,
+        "wires": [
+            [
+                "79cca395d543f560"
+            ]
+        ]
+    },
+    {
+        "id": "632b7498ec80ec71",
+        "type": "debug",
+        "z": "49868e9529ec35fd",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "cc6b2a532ca955f8",
+        "type": "inject",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 900,
+        "wires": [
+            [
+                "894fe516b026c30a"
             ]
         ]
     }
