@@ -415,8 +415,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 180,
+        "x": 470,
+        "y": 120,
         "wires": [
             [
                 "4e1e9ff94eb52da4"
@@ -449,7 +449,7 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
+        "x": 470,
         "y": 240,
         "wires": [
             [
@@ -483,8 +483,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 300,
+        "x": 530,
+        "y": 320,
         "wires": [
             [
                 "0c2382b2a0ea658a"
@@ -519,8 +519,8 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 180,
+        "x": 790,
+        "y": 80,
         "wires": []
     },
     {
@@ -551,8 +551,8 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 240,
+        "x": 810,
+        "y": 200,
         "wires": []
     },
     {
@@ -584,7 +584,7 @@
         "showBorder": true,
         "showGlow": true,
         "x": 830,
-        "y": 300,
+        "y": 280,
         "wires": []
     },
     {
