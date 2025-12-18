@@ -345,7 +345,7 @@
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
-        "protocolVersion": 4,
+        "protocolVersion": "3",
         "keepalive": 60,
         "cleansession": true,
         "autoUnsubscribe": true,
@@ -1248,9 +1248,9 @@
         "nl": false,
         "rap": true,
         "rh": 0,
-        "inputs": 0,
-        "x": 150,
-        "y": 160,
+        "inputs": 1,
+        "x": 230,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1260,18 +1260,43 @@
         "type": "mqtt out",
         "z": "1f94d9dd28469bca",
         "name": "",
-        "topic": "",
-        "qos": "1",
-        "retain": "",
+        "topic": "encender",
+        "qos": "0",
+        "retain": "false",
         "respTopic": "",
         "contentType": "",
         "userProps": "",
         "correl": "",
         "expiry": "",
         "broker": "bb62a1d78ecabbf4",
-        "x": 410,
-        "y": 100,
+        "x": 460,
+        "y": 160,
         "wires": []
+    },
+    {
+        "id": "9e4f8e3a9ac82740",
+        "type": "aedes broker",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [],
+            []
+        ]
     },
     {
         "id": "86a92c9d03b51f82",
@@ -1627,5 +1652,15 @@
                 "894fe516b026c30a"
             ]
         ]
+    },
+    {
+        "id": "0dd4d67a7cbef3fb",
+        "type": "comment",
+        "z": "49868e9529ec35fd",
+        "name": "comentarios alexa",
+        "info": "comentarios alexa, probar el puerto en otra ubicacion",
+        "x": 530,
+        "y": 860,
+        "wires": []
     }
 ]
