@@ -1,5 +1,13 @@
 [
     {
+        "id": "1b99cb21167619d4",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "216a3e955e6e9f1e",
         "type": "tab",
         "label": "Interruptores",
@@ -51,6 +59,14 @@
         "id": "49868e9529ec35fd",
         "type": "tab",
         "label": "Alexa",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cc02b4ebb214aa45",
+        "type": "tab",
+        "label": "Flujo 2",
         "disabled": false,
         "info": "",
         "env": []
@@ -448,6 +464,20 @@
         "groupType": "default"
     },
     {
+        "id": "de2bfdf0214077bf",
+        "type": "ui-group",
+        "name": "Group 9",
+        "page": "c072b84bbe9f58bd",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "ddfa6ad641de26b2",
         "type": "ui-switch",
         "z": "216a3e955e6e9f1e",
@@ -473,8 +503,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 470,
-        "y": 120,
+        "x": 630,
+        "y": 160,
         "wires": [
             [
                 "4e1e9ff94eb52da4"
@@ -507,8 +537,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 470,
-        "y": 240,
+        "x": 630,
+        "y": 220,
         "wires": [
             [
                 "d6d70a8df6c92902"
@@ -541,8 +571,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 530,
-        "y": 320,
+        "x": 630,
+        "y": 280,
         "wires": [
             [
                 "0c2382b2a0ea658a"
@@ -577,8 +607,8 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 790,
-        "y": 80,
+        "x": 830,
+        "y": 140,
         "wires": []
     },
     {
@@ -976,6 +1006,110 @@
         ]
     },
     {
+        "id": "8b5156dd3b3fc9c9",
+        "type": "mqtt in",
+        "z": "216a3e955e6e9f1e",
+        "name": "",
+        "topic": "Panel",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bb62a1d78ecabbf4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "ddfa6ad641de26b2",
+                "e2cb3062bcea5e4b",
+                "9d5e2e61c45dc614",
+                "1a1d035febc4460e",
+                "0eee91e9fa4cc9d4",
+                "c9e0d2eaa811d0b5",
+                "7aeca91b9cf0aad0",
+                "141e7d408d8f79df"
+            ]
+        ]
+    },
+    {
+        "id": "57db654fdfebf27a",
+        "type": "mqtt out",
+        "z": "216a3e955e6e9f1e",
+        "name": "",
+        "topic": "Panel",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb62a1d78ecabbf4",
+        "x": 270,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4c7b1f829ff7dd82",
+        "type": "inject",
+        "z": "216a3e955e6e9f1e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "57db654fdfebf27a"
+            ]
+        ]
+    },
+    {
+        "id": "2caab79ba2eb1dee",
+        "type": "inject",
+        "z": "216a3e955e6e9f1e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 380,
+        "wires": [
+            [
+                "57db654fdfebf27a"
+            ]
+        ]
+    },
+    {
         "id": "87febd98e0da398a",
         "type": "ping",
         "z": "dfe47cb10dd12990",
@@ -986,7 +1120,7 @@
         "timer": "2",
         "inputs": 0,
         "x": 190,
-        "y": 200,
+        "y": 160,
         "wires": [
             [
                 "e217b0703a4cfcd2"
@@ -1156,8 +1290,8 @@
         "mobileBreakpointType": "defaults",
         "action": "append",
         "className": "",
-        "x": 430,
-        "y": 180,
+        "x": 390,
+        "y": 100,
         "wires": [
             []
         ]
@@ -1174,8 +1308,8 @@
         "height": 0,
         "color": "",
         "className": "",
-        "x": 490,
-        "y": 260,
+        "x": 410,
+        "y": 220,
         "wires": []
     },
     {
@@ -1184,7 +1318,7 @@
         "z": "033f6ae036d77b73",
         "ui": "a65f1e263306255b",
         "name": "evento",
-        "x": 470,
+        "x": 390,
         "y": 340,
         "wires": [
             []
@@ -1359,8 +1493,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 150,
-        "y": 220,
+        "x": 170,
+        "y": 180,
         "wires": [
             [
                 "6d1d2ca0fac043d6"
@@ -1389,7 +1523,7 @@
         "type": "ui-led",
         "z": "1f94d9dd28469bca",
         "name": "",
-        "group": "bd887308561d1dee",
+        "group": "de2bfdf0214077bf",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -1437,8 +1571,42 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "6d1d2ca0fac043d6"
+            ]
+        ]
+    },
+    {
+        "id": "cb2b1d9744a94c0c",
+        "type": "ui-switch",
+        "z": "1f94d9dd28469bca",
+        "name": "",
+        "label": "switch",
+        "group": "bd887308561d1dee",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "encender",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread-swapped",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
         "x": 150,
-        "y": 300,
+        "y": 280,
         "wires": [
             [
                 "6d1d2ca0fac043d6"
@@ -1518,11 +1686,12 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "installation": "standalone",
-        "x": 360,
-        "y": 660,
+        "x": 340,
+        "y": 500,
         "wires": [
             [
-                "1b10f19ccbf665d4"
+                "1b10f19ccbf665d4",
+                "4b536681cabe2cd2"
             ]
         ]
     },
@@ -1536,8 +1705,7 @@
         "y": 580,
         "wires": [
             [
-                "6e5a446287c0cb9a",
-                "e9e99b39c684099d"
+                "6e5a446287c0cb9a"
             ]
         ]
     },
@@ -1550,7 +1718,8 @@
         "y": 740,
         "wires": [
             [
-                "42afca47339b6509"
+                "42afca47339b6509",
+                "f878afc7f552a550"
             ]
         ]
     },
@@ -1564,8 +1733,7 @@
         "y": 700,
         "wires": [
             [
-                "d30208141dbf5c71",
-                "f0fad7a13454cf83"
+                "d30208141dbf5c71"
             ]
         ]
     },
@@ -1608,7 +1776,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 300,
-        "y": 800,
+        "y": 760,
         "wires": [
             [
                 "9fb415379da76c35"
@@ -1620,8 +1788,8 @@
         "type": "ui-led",
         "z": "49868e9529ec35fd",
         "name": "",
-        "group": "bd887308561d1dee",
-        "order": 3,
+        "group": "de2bfdf0214077bf",
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "",
@@ -1669,8 +1837,8 @@
         "type": "ui-led",
         "z": "49868e9529ec35fd",
         "name": "",
-        "group": "bd887308561d1dee",
-        "order": 2,
+        "group": "de2bfdf0214077bf",
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "",
@@ -1692,8 +1860,8 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 750,
-        "y": 620,
+        "x": 850,
+        "y": 580,
         "wires": []
     },
     {
@@ -1808,6 +1976,93 @@
         "info": "comentarios alexa, probar el puerto en otra ubicacion",
         "x": 530,
         "y": 860,
+        "wires": []
+    },
+    {
+        "id": "f1d1ec0d6ba2a6ec",
+        "type": "mqtt in",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "topic": "alexa",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "bb62a1d78ecabbf4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 690,
+        "y": 580,
+        "wires": [
+            [
+                "e9e99b39c684099d",
+                "f0fad7a13454cf83"
+            ]
+        ]
+    },
+    {
+        "id": "4b536681cabe2cd2",
+        "type": "mqtt out",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "topic": "alexa",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb62a1d78ecabbf4",
+        "x": 510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e81add8acce2692b",
+        "type": "inject",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "53426ccc33657e1c"
+            ]
+        ]
+    },
+    {
+        "id": "f878afc7f552a550",
+        "type": "mqtt out",
+        "z": "49868e9529ec35fd",
+        "name": "",
+        "topic": "alexa",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bb62a1d78ecabbf4",
+        "x": 670,
+        "y": 760,
         "wires": []
     }
 ]
