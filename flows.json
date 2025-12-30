@@ -72,6 +72,109 @@
         "env": []
     },
     {
+        "id": "759b8c84b09295a3",
+        "type": "subflow",
+        "name": "Subflow leds",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 1780,
+                "y": 20,
+                "wires": [
+                    {
+                        "id": "ddfa6ad641de26b2",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1780,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "e2cb3062bcea5e4b",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1760,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "9d5e2e61c45dc614",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1760,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "1a1d035febc4460e",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1760,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "0eee91e9fa4cc9d4",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1780,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "c9e0d2eaa811d0b5",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1760,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "7aeca91b9cf0aad0",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1780,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "141e7d408d8f79df",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 1440,
+            "y": 240,
+            "wires": [
+                {
+                    "id": "8b5156dd3b3fc9c9",
+                    "port": 0
+                }
+            ]
+        }
+    },
+    {
         "id": "a65f1e263306255b",
         "type": "ui-base",
         "name": "My Dashboard",
@@ -480,7 +583,7 @@
     {
         "id": "ddfa6ad641de26b2",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -503,8 +606,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 630,
-        "y": 160,
+        "x": 1650,
+        "y": 60,
         "wires": [
             [
                 "4e1e9ff94eb52da4"
@@ -514,7 +617,7 @@
     {
         "id": "e2cb3062bcea5e4b",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -537,8 +640,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 630,
-        "y": 220,
+        "x": 1650,
+        "y": 100,
         "wires": [
             [
                 "d6d70a8df6c92902"
@@ -548,7 +651,7 @@
     {
         "id": "9d5e2e61c45dc614",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -571,8 +674,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 630,
-        "y": 280,
+        "x": 1650,
+        "y": 140,
         "wires": [
             [
                 "0c2382b2a0ea658a"
@@ -582,7 +685,7 @@
     {
         "id": "4e1e9ff94eb52da4",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 6,
@@ -607,14 +710,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 140,
+        "x": 1890,
+        "y": 80,
         "wires": []
     },
     {
         "id": "d6d70a8df6c92902",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 7,
@@ -639,14 +742,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 810,
-        "y": 200,
+        "x": 1870,
+        "y": 160,
         "wires": []
     },
     {
         "id": "0c2382b2a0ea658a",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 8,
@@ -671,14 +774,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 280,
+        "x": 1890,
+        "y": 220,
         "wires": []
     },
     {
         "id": "88a64292b4298f84",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 5,
@@ -703,14 +806,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 360,
+        "x": 1890,
+        "y": 300,
         "wires": []
     },
     {
         "id": "1163519a0a28b5fd",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 4,
@@ -735,14 +838,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 420,
+        "x": 1890,
+        "y": 380,
         "wires": []
     },
     {
         "id": "67411304fb59de91",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 3,
@@ -767,14 +870,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 460,
+        "x": 1910,
+        "y": 420,
         "wires": []
     },
     {
         "id": "9336c8591ffcaadf",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 2,
@@ -799,14 +902,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 500,
+        "x": 1930,
+        "y": 480,
         "wires": []
     },
     {
         "id": "89dc6e3a506537ff",
         "type": "ui-led",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "group": "60b6872ea35bde95",
         "order": 1,
@@ -831,14 +934,14 @@
         "shape": "circle",
         "showBorder": true,
         "showGlow": true,
-        "x": 830,
-        "y": 540,
+        "x": 1830,
+        "y": 520,
         "wires": []
     },
     {
         "id": "1a1d035febc4460e",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -861,8 +964,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 360,
+        "x": 1650,
+        "y": 200,
         "wires": [
             [
                 "88a64292b4298f84"
@@ -872,7 +975,7 @@
     {
         "id": "0eee91e9fa4cc9d4",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -895,8 +998,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 420,
+        "x": 1650,
+        "y": 280,
         "wires": [
             [
                 "1163519a0a28b5fd"
@@ -906,7 +1009,7 @@
     {
         "id": "c9e0d2eaa811d0b5",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -929,8 +1032,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 460,
+        "x": 1650,
+        "y": 340,
         "wires": [
             [
                 "67411304fb59de91"
@@ -940,7 +1043,7 @@
     {
         "id": "7aeca91b9cf0aad0",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -963,8 +1066,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 500,
+        "x": 1650,
+        "y": 380,
         "wires": [
             [
                 "9336c8591ffcaadf"
@@ -974,7 +1077,7 @@
     {
         "id": "141e7d408d8f79df",
         "type": "ui-switch",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "label": "switch",
         "group": "94ebc76ded6ad8da",
@@ -997,8 +1100,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 650,
-        "y": 540,
+        "x": 1650,
+        "y": 440,
         "wires": [
             [
                 "89dc6e3a506537ff"
@@ -1008,7 +1111,7 @@
     {
         "id": "8b5156dd3b3fc9c9",
         "type": "mqtt in",
-        "z": "216a3e955e6e9f1e",
+        "z": "759b8c84b09295a3",
         "name": "",
         "topic": "Panel",
         "qos": "2",
@@ -1018,8 +1121,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 190,
-        "y": 120,
+        "x": 1410,
+        "y": 100,
         "wires": [
             [
                 "ddfa6ad641de26b2",
@@ -1031,6 +1134,24 @@
                 "7aeca91b9cf0aad0",
                 "141e7d408d8f79df"
             ]
+        ]
+    },
+    {
+        "id": "fa21969741493630",
+        "type": "subflow:759b8c84b09295a3",
+        "z": "1b99cb21167619d4",
+        "name": "",
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
         ]
     },
     {
@@ -1047,8 +1168,8 @@
         "correl": "",
         "expiry": "",
         "broker": "bb62a1d78ecabbf4",
-        "x": 270,
-        "y": 320,
+        "x": 290,
+        "y": 280,
         "wires": []
     },
     {
@@ -1072,8 +1193,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 130,
-        "y": 300,
+        "x": 150,
+        "y": 180,
         "wires": [
             [
                 "57db654fdfebf27a"
@@ -1101,13 +1222,49 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 110,
-        "y": 380,
+        "x": 130,
+        "y": 320,
         "wires": [
             [
                 "57db654fdfebf27a"
             ]
         ]
+    },
+    {
+        "id": "c7251025acee6095",
+        "type": "subflow:759b8c84b09295a3",
+        "z": "216a3e955e6e9f1e",
+        "name": "",
+        "x": 550,
+        "y": 180,
+        "wires": [
+            [
+                "f44a60f3b4349f3a"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f44a60f3b4349f3a",
+        "type": "debug",
+        "z": "216a3e955e6e9f1e",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "87febd98e0da398a",
