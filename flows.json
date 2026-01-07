@@ -119,6 +119,21 @@
         "env": []
     },
     {
+        "id": "4070959c.e1715c",
+        "type": "tab",
+        "label": "keypad",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c721770df812e804",
+        "type": "tab",
+        "label": "Flujo 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -1019,6 +1034,24 @@
         "disp": true,
         "width": "20",
         "collapse": false
+    },
+    {
+        "id": "e01b6f.a9d07c9",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f0166794.33066",
+        "type": "ui_group",
+        "name": "Device management",
+        "tab": "e01b6f.a9d07c9",
+        "order": 2,
+        "disp": true,
+        "width": "7",
+        "collapse": true
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -2390,7 +2423,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
@@ -2418,7 +2452,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
+        "x": 150,
         "y": 120,
         "wires": [
             [
@@ -3450,7 +3484,7 @@
         "to": "",
         "reg": false,
         "x": 260,
-        "y": 340,
+        "y": 320,
         "wires": [
             [
                 "66a386c082e41b2c"
@@ -4088,5 +4122,45 @@
                 "92e67155.d75758"
             ]
         ]
+    },
+    {
+        "id": "88733868.cf1938",
+        "type": "ui_template",
+        "z": "4070959c.e1715c",
+        "group": "f0166794.33066",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>>\n.main\n{\nheight:700px;\nbackground-color:light-gray;\n}\nbutton {\n  background-color: gray; \n  border: black;\n  border-radius: 12px;\n  color: white;\n  text-align: center;\n  font-size: 40px\n\n}\n</style>\n\n<div class=main>\n<table  width=\"100%\" height=\"400px\">\n\n<tr class=\"trow1\">\n<td ng-click=\"send({payload: '01'})\" ><button>1</button></td>\n<td ng-click=\"send({payload: '02'})\" ><button>2</button></td>\n<td ng-click=\"send({payload: '03'})\" ><button>3</button></td>\n</tr>\n<tr class=\"trow2\">\n<td ng-click=\"send({payload: '04'})\" ><button>4</button></td>\n<td ng-click=\"send({payload: '05'})\" ><button>5</button></td>\n<td ng-click=\"send({payload: '06'})\" ><button>6</button></td>\n</tr>\n<tr class=\"trow3\">\n<td ng-click=\"send({payload: '07'})\" ><button>7</button></td>\n<td ng-click=\"send({payload: '08'})\" ><button>8</button></td>\n<td ng-click=\"send({payload: '09'})\" ><button>9</button></td>\n</tr>\n<tr class=\"trow4\">\n<td ng-click=\"send({payload: '0*'})\" ><button>*</button></td>\n<td ng-click=\"send({payload: '00'})\" ><button>0</button></td>\n<td ng-click=\"send({payload: '0#'})\" ><button>#</button></td>\n</tr>\n</table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "f76a3708.8ef8d8"
+            ]
+        ]
+    },
+    {
+        "id": "f76a3708.8ef8d8",
+        "type": "debug",
+        "z": "4070959c.e1715c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 180,
+        "wires": []
     }
 ]
