@@ -72,6 +72,22 @@
         "env": []
     },
     {
+        "id": "d60742dc5ab2fa8e",
+        "type": "tab",
+        "label": "redes",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a20e512c16cd677e",
+        "type": "tab",
+        "label": "booolean",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -172,6 +188,23 @@
                     "port": 0
                 }
             ]
+        }
+    },
+    {
+        "id": "46345d998cc006d3",
+        "type": "subflow",
+        "name": "Red_local",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99",
+        "status": {
+            "x": 300,
+            "y": 60,
+            "wires": []
         }
     },
     {
@@ -1137,6 +1170,48 @@
         ]
     },
     {
+        "id": "b255d39489a7e8a8",
+        "type": "function",
+        "z": "46345d998cc006d3",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "948061843cc848ae",
+        "type": "http request",
+        "z": "46345d998cc006d3",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 120,
+        "wires": [
+            [
+                "b255d39489a7e8a8"
+            ]
+        ]
+    },
+    {
         "id": "fa21969741493630",
         "type": "subflow:759b8c84b09295a3",
         "z": "1b99cb21167619d4",
@@ -1235,7 +1310,7 @@
         "type": "subflow:759b8c84b09295a3",
         "z": "216a3e955e6e9f1e",
         "name": "",
-        "x": 550,
+        "x": 450,
         "y": 180,
         "wires": [
             [
@@ -1262,8 +1337,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 120,
+        "x": 660,
+        "y": 100,
         "wires": []
     },
     {
@@ -1276,8 +1351,8 @@
         "host": "www.google.com",
         "timer": "2",
         "inputs": 0,
-        "x": 190,
-        "y": 160,
+        "x": 230,
+        "y": 140,
         "wires": [
             [
                 "e217b0703a4cfcd2"
@@ -1465,8 +1540,8 @@
         "height": 0,
         "color": "",
         "className": "",
-        "x": 410,
-        "y": 220,
+        "x": 270,
+        "y": 160,
         "wires": []
     },
     {
@@ -1651,7 +1726,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 170,
-        "y": 180,
+        "y": 200,
         "wires": [
             [
                 "6d1d2ca0fac043d6"
@@ -1843,8 +1918,8 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "installation": "standalone",
-        "x": 340,
-        "y": 500,
+        "x": 360,
+        "y": 220,
         "wires": [
             [
                 "1b10f19ccbf665d4",
@@ -1859,7 +1934,7 @@
         "name": "x",
         "deviceType": "light",
         "x": 510,
-        "y": 580,
+        "y": 340,
         "wires": [
             [
                 "6e5a446287c0cb9a"
@@ -1985,8 +2060,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
-        "y": 480,
+        "x": 680,
+        "y": 260,
         "wires": []
     },
     {
@@ -2042,8 +2117,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 170,
-        "y": 560,
+        "x": 150,
+        "y": 320,
         "wires": [
             [
                 "53426ccc33657e1c"
@@ -2148,8 +2223,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 690,
-        "y": 580,
+        "x": 630,
+        "y": 600,
         "wires": [
             [
                 "e9e99b39c684099d",
@@ -2171,8 +2246,8 @@
         "correl": "",
         "expiry": "",
         "broker": "bb62a1d78ecabbf4",
-        "x": 510,
-        "y": 480,
+        "x": 610,
+        "y": 100,
         "wires": []
     },
     {
@@ -2196,8 +2271,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 130,
-        "y": 480,
+        "x": 170,
+        "y": 160,
         "wires": [
             [
                 "53426ccc33657e1c"
@@ -2220,6 +2295,456 @@
         "broker": "bb62a1d78ecabbf4",
         "x": 670,
         "y": 760,
+        "wires": []
+    },
+    {
+        "id": "e03a06cdb5d0c85d",
+        "type": "function",
+        "z": "cc02b4ebb214aa45",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0a8b054b59b762d2",
+        "type": "http request",
+        "z": "d60742dc5ab2fa8e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "https://192.168.1.1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "1bf469335c80746f"
+            ]
+        ]
+    },
+    {
+        "id": "6e59df5786d35196",
+        "type": "inject",
+        "z": "d60742dc5ab2fa8e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "xxx",
+        "payloadType": "str",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "0a8b054b59b762d2"
+            ]
+        ]
+    },
+    {
+        "id": "1bf469335c80746f",
+        "type": "debug",
+        "z": "d60742dc5ab2fa8e",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1a90a718.5c0409",
+        "type": "BooleanLogicUltimate",
+        "z": "a20e512c16cd677e",
+        "name": "",
+        "payloadPropName": "payload",
+        "filtertrue": "both",
+        "persist": true,
+        "sInitializeWith": "WaitForPayload",
+        "triggertopic": "trigger",
+        "outputtriggeredby": "all",
+        "inputCount": 2,
+        "topic": "result",
+        "restrictinputevaluation": false,
+        "delayEvaluation": "",
+        "translatorConfig": "",
+        "x": 460,
+        "y": 160,
+        "wires": [
+            [
+                "5f9fbfcc.d2c34"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "81ef6fec.5d413",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "Night",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Dark",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "1a90a718.5c0409"
+            ]
+        ]
+    },
+    {
+        "id": "e0d5d620.966478",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "Daylight",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Dark",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "1a90a718.5c0409"
+            ]
+        ]
+    },
+    {
+        "id": "1c2f8e73.2c22ba",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "Motion detect true",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Motion",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "1a90a718.5c0409"
+            ]
+        ]
+    },
+    {
+        "id": "5f9fbfcc.d2c34",
+        "type": "debug",
+        "z": "a20e512c16cd677e",
+        "name": "Garden Light",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "201baa3d.7c63ae",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "Motion detect false",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Motion",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "1a90a718.5c0409"
+            ]
+        ]
+    },
+    {
+        "id": "b65f4ff4.bfe2c8",
+        "type": "comment",
+        "z": "a20e512c16cd677e",
+        "name": "Motion sensor turns on lights, when it's dark. The light turns off itself at day",
+        "info": "",
+        "x": 370,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "33d76f42.58e088",
+        "type": "BlinkerUltimate",
+        "z": "a20e512c16cd677e",
+        "name": "Blinker",
+        "blinkfrequency": "500",
+        "payloadPropName": "payload",
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "ad7488b.2a1d9f8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ac0d404f.70cc",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 400,
+        "wires": [
+            [
+                "33d76f42.58e088"
+            ]
+        ]
+    },
+    {
+        "id": "bfdc64c6.06e2d",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 250,
+        "y": 440,
+        "wires": [
+            [
+                "33d76f42.58e088"
+            ]
+        ]
+    },
+    {
+        "id": "ad7488b.2a1d9f8",
+        "type": "debug",
+        "z": "a20e512c16cd677e",
+        "name": "Led",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "865e29f9.4d1e98",
+        "type": "comment",
+        "z": "a20e512c16cd677e",
+        "name": "Blink a signalling led",
+        "info": "",
+        "x": 270,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "05b6ce0cb476abd5",
+        "type": "SumUltimate",
+        "z": "a20e512c16cd677e",
+        "name": "Multiply",
+        "property": "payload",
+        "math": "multiply",
+        "subtractstartfrom": "",
+        "x": 480,
+        "y": 600,
+        "wires": [
+            [
+                "567aa6a9719e463e"
+            ]
+        ]
+    },
+    {
+        "id": "6744e01b88d820b9",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Wh Washing machine",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "05b6ce0cb476abd5"
+            ]
+        ]
+    },
+    {
+        "id": "75823dbc7db78c3c",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Cost per KWh",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 240,
+        "y": 640,
+        "wires": [
+            [
+                "05b6ce0cb476abd5"
+            ]
+        ]
+    },
+    {
+        "id": "567aa6a9719e463e",
+        "type": "debug",
+        "z": "a20e512c16cd677e",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1793931ba218bc1d",
+        "type": "inject",
+        "z": "a20e512c16cd677e",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "reset",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "05b6ce0cb476abd5"
+            ]
+        ]
+    },
+    {
+        "id": "0b3277af03f546d4",
+        "type": "comment",
+        "z": "a20e512c16cd677e",
+        "name": "Getting results, (Sum, Multiply etc...) from the MATH node.",
+        "info": "",
+        "x": 350,
+        "y": 560,
         "wires": []
     }
 ]
