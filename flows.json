@@ -128,7 +128,7 @@
     {
         "id": "c721770df812e804",
         "type": "tab",
-        "label": "Flujo 6",
+        "label": "sockets",
         "disabled": false,
         "info": "",
         "env": []
@@ -1052,6 +1052,35 @@
         "disp": true,
         "width": "7",
         "collapse": true
+    },
+    {
+        "id": "efa88b53f09dc03b",
+        "type": "websocket-listener",
+        "path": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b34f67dd53089a09",
+        "type": "websocket-listener",
+        "path": "/ws/local",
+        "wholemsg": "true"
+    },
+    {
+        "id": "2840a07588a1a9b5",
+        "type": "websocket-client",
+        "path": "ws://127.0.0.1:1882/ws/local",
+        "tls": "",
+        "wholemsg": "true",
+        "hb": "60",
+        "subprotocol": "",
+        "headers": []
+    },
+    {
+        "id": "985ecbc7.67a138",
+        "type": "websocket-listener",
+        "z": "c721770df812e804",
+        "path": "/ws/simple",
+        "wholemsg": "false"
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -4161,6 +4190,231 @@
         "statusType": "auto",
         "x": 570,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a87158f56843b84f",
+        "type": "websocket in",
+        "z": "c721770df812e804",
+        "name": "",
+        "server": "b34f67dd53089a09",
+        "client": "",
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "cad0a21d7a93399e"
+            ]
+        ]
+    },
+    {
+        "id": "32bf7907339f7335",
+        "type": "websocket out",
+        "z": "c721770df812e804",
+        "name": "",
+        "server": "",
+        "client": "2840a07588a1a9b5",
+        "x": 700,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cad0a21d7a93399e",
+        "type": "debug",
+        "z": "c721770df812e804",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0787041f630944f3",
+        "type": "function",
+        "z": "c721770df812e804",
+        "name": "function 3",
+        "func": "msg.payload = {\n    mensagem: \"mensagem\",\n    timestamp: msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "32bf7907339f7335"
+            ]
+        ]
+    },
+    {
+        "id": "1b30a763428a41ce",
+        "type": "inject",
+        "z": "c721770df812e804",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "0787041f630944f3"
+            ]
+        ]
+    },
+    {
+        "id": "e3e4522e.1c1bb",
+        "type": "inject",
+        "z": "c721770df812e804",
+        "name": "Tick every 5 secs",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "test",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 400,
+        "wires": [
+            [
+                "45dbf990.ba2408"
+            ]
+        ]
+    },
+    {
+        "id": "50da04b3.af25fc",
+        "type": "websocket out",
+        "z": "c721770df812e804",
+        "name": "",
+        "server": "985ecbc7.67a138",
+        "client": "",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "42a28745.bd5d78",
+        "type": "http response",
+        "z": "c721770df812e804",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 641,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1787be40.e87842",
+        "type": "http in",
+        "z": "c721770df812e804",
+        "name": "",
+        "url": "/simple",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 272,
+        "y": 340,
+        "wires": [
+            [
+                "1857548e.e7a8ab"
+            ]
+        ]
+    },
+    {
+        "id": "1857548e.e7a8ab",
+        "type": "template",
+        "z": "c721770df812e804",
+        "name": "Simple Web Page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE HTML>\n<html>\n    <head>\n    <title>Simple Live Display</title>\n    <script type=\"text/javascript\">\n        var ws;\n        var wsUri = \"ws:\";\n        var loc = window.location;\n        console.log(loc);\n        if (loc.protocol === \"https:\") { wsUri = \"wss:\"; }\n        // This needs to point to the web socket in the Node-RED flow\n        // ... in this case it's ws/simple\n        wsUri += \"//\" + loc.host + loc.pathname.replace(\"simple\",\"ws/simple\");\n\n        function wsConnect() {\n            console.log(\"connect\",wsUri);\n            ws = new WebSocket(wsUri);\n            //var line = \"\";    // either uncomment this for a building list of messages\n            ws.onmessage = function(msg) {\n                var line = \"\";  // or uncomment this to overwrite the existing message\n                // parse the incoming message as a JSON object\n                var data = msg.data;\n                //console.log(data);\n                // build the output from the topic and payload parts of the object\n                line += \"<p>\"+data+\"</p>\";\n                // replace the messages div with the new \"line\"\n                document.getElementById('messages').innerHTML = line;\n                //ws.send(JSON.stringify({data:data}));\n            }\n            ws.onopen = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"connected\";\n                //ws.send(\"Open for data\");\n                console.log(\"connected\");\n            }\n            ws.onclose = function() {\n                // update the status div with the connection status\n                document.getElementById('status').innerHTML = \"not connected\";\n                // in case of lost connection tries to reconnect every 3 secs\n                setTimeout(wsConnect,3000);\n            }\n        }\n        \n        function doit(m) {\n            if (ws) { ws.send(m); }\n        }\n    </script>\n    </head>\n    <body onload=\"wsConnect();\" onunload=\"ws.disconnect();\">\n        <font face=\"Arial\">\n        <h1>Simple Live Display</h1>\n        <div id=\"messages\"></div>\n        <button type=\"button\" onclick='doit(\"click\");'>Click to send message</button>\n        <hr/>\n        <div id=\"status\">unknown</div>\n        </font>\n    </body>\n</html>\n",
+        "x": 469,
+        "y": 340,
+        "wires": [
+            [
+                "42a28745.bd5d78"
+            ]
+        ]
+    },
+    {
+        "id": "45dbf990.ba2408",
+        "type": "function",
+        "z": "c721770df812e804",
+        "name": "format time nicely",
+        "func": "msg.payload = Date(msg.payload).toString();\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 400,
+        "wires": [
+            [
+                "50da04b3.af25fc"
+            ]
+        ]
+    },
+    {
+        "id": "eccc8bc2.133378",
+        "type": "websocket in",
+        "z": "c721770df812e804",
+        "name": "",
+        "server": "985ecbc7.67a138",
+        "client": "",
+        "x": 457,
+        "y": 452,
+        "wires": [
+            [
+                "9adfff59.652"
+            ]
+        ]
+    },
+    {
+        "id": "9adfff59.652",
+        "type": "debug",
+        "z": "c721770df812e804",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 647,
+        "y": 452,
         "wires": []
     }
 ]
