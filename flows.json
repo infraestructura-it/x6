@@ -150,6 +150,14 @@
         "env": []
     },
     {
+        "id": "4b150ba7997bc74a",
+        "type": "tab",
+        "label": "Flujo 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -1114,6 +1122,11 @@
         "willTopic": "",
         "willQos": "0",
         "willPayload": ""
+    },
+    {
+        "id": "bf1f38b1bcb46cbd",
+        "type": "gemini-api-key",
+        "name": "node-red-oficina"
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -4482,8 +4495,8 @@
         "cmdPrefix": "cmnd",
         "statPrefix": "stat",
         "telePrefix": "tele",
-        "x": 570,
-        "y": 220,
+        "x": 590,
+        "y": 120,
         "wires": [
             []
         ]
@@ -4502,8 +4515,53 @@
         "statPrefix": "stat",
         "telePrefix": "tele",
         "x": 590,
-        "y": 460,
+        "y": 300,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "82e009ef59f54558",
+        "type": "gemini-generate-content",
+        "z": "4b150ba7997bc74a",
+        "name": "oficina",
+        "apiKey": "bf1f38b1bcb46cbd",
+        "modelSelection": "gemini-2.5-flash",
+        "customModel": "",
+        "customModelType": "str",
+        "mode": "chat",
+        "prompt": "",
+        "promptType": "str",
+        "multimodalInputsData": "[]",
+        "grounding": false,
+        "temperature": "",
+        "temperatureType": "num",
+        "topP": "",
+        "topPType": "num",
+        "topK": "",
+        "topKType": "num",
+        "maxOutputTokens": "",
+        "maxOutputTokensType": "num",
+        "safetyHarassment": "",
+        "safetyHateSpeech": "",
+        "safetySexuallyExplicit": "",
+        "safetyDangerousContent": "",
+        "thinkingBudget": "",
+        "thinkingBudgetType": "num",
+        "thinkingLevel": "",
+        "thinkingLevelType": "str",
+        "includeThoughts": false,
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "outputProperty": "payload",
+        "passthroughProperties": false,
+        "responseFormat": "text",
+        "schemaPropertiesData": "[]",
+        "enumValues": "",
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [],
             []
         ]
     }
