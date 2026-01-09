@@ -4,7 +4,13 @@
     "version": "0.0.1",
     "dependencies": {
         "@flowfuse/node-red-dashboard": "1.30.0",
-        "node-red-contrib-ui-led": "0.4.11"
+        "node-red-contrib-ui-led": "0.4.11",
+        "node-red-contrib-amazon-echo": "0.1.16",
+        "node-red-contrib-aedes": "0.15.0",
+        "node-red-contrib-boolean-logic-ultimate": "1.2.3",
+        "node-red-contrib-dulonode": "1.0.10",
+        "node-red-dashboard": "3.6.6",
+        "node-red-node-ping": "0.3.3"
     },
     "node-red": {
         "settings": {
