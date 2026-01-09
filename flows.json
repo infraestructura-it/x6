@@ -136,7 +136,15 @@
     {
         "id": "9e1ee8d60612cbc2",
         "type": "tab",
-        "label": "oficina",
+        "label": "oficina snmp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c3bc2f893eef21e0",
+        "type": "tab",
+        "label": "tasmota",
         "disabled": false,
         "info": "",
         "env": []
@@ -1089,6 +1097,23 @@
         "z": "c721770df812e804",
         "path": "/ws/simple",
         "wholemsg": "false"
+    },
+    {
+        "id": "31a99116.50a74e",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -4424,5 +4449,62 @@
         "x": 647,
         "y": 452,
         "wires": []
+    },
+    {
+        "id": "700534ff5cfb2a35",
+        "type": "snmp",
+        "z": "9e1ee8d60612cbc2",
+        "host": "127.0.0.1",
+        "version": "1",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "",
+        "name": "x1",
+        "x": 350,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "223dae2c2ed84012",
+        "type": "Sonoff device",
+        "z": "c3bc2f893eef21e0",
+        "mode": "0",
+        "broker": "bb62a1d78ecabbf4",
+        "device": "sonoff",
+        "name": "x1",
+        "onValue": "ON",
+        "offValue": "OFF",
+        "cmdPrefix": "cmnd",
+        "statPrefix": "stat",
+        "telePrefix": "tele",
+        "x": 570,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31a99116.86e71",
+        "type": "Sonoff device",
+        "z": "c3bc2f893eef21e0",
+        "mode": "0",
+        "broker": "31a99116.50a74e",
+        "device": "light_livingroom",
+        "name": "Living Room Light",
+        "onValue": "ON",
+        "offValue": "OFF",
+        "cmdPrefix": "cmnd",
+        "statPrefix": "stat",
+        "telePrefix": "tele",
+        "x": 590,
+        "y": 460,
+        "wires": [
+            []
+        ]
     }
 ]
