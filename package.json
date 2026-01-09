@@ -10,7 +10,8 @@
         "node-red-contrib-boolean-logic-ultimate": "1.2.3",
         "node-red-contrib-dulonode": "1.0.10",
         "node-red-dashboard": "3.6.6",
-        "node-red-node-ping": "0.3.3"
+        "node-red-node-ping": "0.3.3",
+        "@flowfuse/node-red-dashboard-2-ui-led": "1.1.0"
     },
     "node-red": {
         "settings": {
