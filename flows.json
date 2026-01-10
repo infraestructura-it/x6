@@ -158,6 +158,22 @@
         "env": []
     },
     {
+        "id": "10098f884d0b2060",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4ea4df881d487420",
+        "type": "tab",
+        "label": "Flujo 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -1127,6 +1143,16 @@
         "id": "bf1f38b1bcb46cbd",
         "type": "gemini-api-key",
         "name": "node-red-oficina"
+    },
+    {
+        "id": "7a5b277748df295e",
+        "type": "gauth",
+        "name": "Unknown"
+    },
+    {
+        "id": "b77f6911b4520b69",
+        "type": "gauth",
+        "name": "node-redx@my-project-2026-483900.iam.gserviceaccount.com"
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -4558,8 +4584,8 @@
         "responseFormat": "text",
         "schemaPropertiesData": "[]",
         "enumValues": "",
-        "x": 530,
-        "y": 160,
+        "x": 410,
+        "y": 100,
         "wires": [
             [],
             []
@@ -4569,17 +4595,65 @@
         "id": "dcdb7ae7797cc482",
         "type": "GSheet",
         "z": "4b150ba7997bc74a",
-        "creds": "",
-        "method": "",
+        "creds": "b77f6911b4520b69",
+        "method": "append",
         "action": "",
-        "sheet": "",
-        "cells": "",
-        "flatten": false,
+        "sheet": "1Wkmn5d-hphSDVuLPZoMUbMN8xsnnqtPrlZFblkt9x8Q",
+        "cells": "datos",
+        "flatten": true,
         "name": "",
-        "x": 640,
-        "y": 280,
+        "x": 390,
+        "y": 220,
         "wires": [
-            []
+            [
+                "3553077ac15b0e28"
+            ]
         ]
+    },
+    {
+        "id": "22605dc5c462c19b",
+        "type": "inject",
+        "z": "4b150ba7997bc74a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "dcdb7ae7797cc482"
+            ]
+        ]
+    },
+    {
+        "id": "3553077ac15b0e28",
+        "type": "debug",
+        "z": "4b150ba7997bc74a",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 140,
+        "wires": []
     }
 ]
