@@ -3,7 +3,7 @@
         "id": "1b99cb21167619d4",
         "type": "tab",
         "label": "Flujo 1",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "216a3e955e6e9f1e",
         "type": "tab",
         "label": "Interruptores",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -19,7 +19,7 @@
         "id": "dfe47cb10dd12990",
         "type": "tab",
         "label": "Graficos ",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -27,7 +27,7 @@
         "id": "033f6ae036d77b73",
         "type": "tab",
         "label": "eventos",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -35,7 +35,7 @@
         "id": "4680a899e4666e7d",
         "type": "tab",
         "label": "Formularios",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -43,7 +43,7 @@
         "id": "1f94d9dd28469bca",
         "type": "tab",
         "label": "Mqtt",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -51,7 +51,7 @@
         "id": "84e5453dc2fdf863",
         "type": "tab",
         "label": "comando unix",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -59,7 +59,7 @@
         "id": "49868e9529ec35fd",
         "type": "tab",
         "label": "Alexa",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -67,7 +67,7 @@
         "id": "cc02b4ebb214aa45",
         "type": "tab",
         "label": "Flujo 2",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -75,7 +75,7 @@
         "id": "d60742dc5ab2fa8e",
         "type": "tab",
         "label": "redes",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -83,7 +83,7 @@
         "id": "a20e512c16cd677e",
         "type": "tab",
         "label": "booolean",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -91,7 +91,7 @@
         "id": "aee21edd9fe3150c",
         "type": "tab",
         "label": "Flujo 4",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -99,7 +99,7 @@
         "id": "ec12cb17de3fbba4",
         "type": "tab",
         "label": "Input data",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -107,14 +107,14 @@
         "id": "cd274fe4.4c1428",
         "type": "tab",
         "label": "Display Last x Messages",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "b331495b27e4cea5",
         "type": "tab",
         "label": "Flujo 5",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -122,14 +122,14 @@
         "id": "4070959c.e1715c",
         "type": "tab",
         "label": "keypad",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "c721770df812e804",
         "type": "tab",
         "label": "sockets",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -137,7 +137,7 @@
         "id": "9e1ee8d60612cbc2",
         "type": "tab",
         "label": "oficina snmp",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -145,7 +145,7 @@
         "id": "c3bc2f893eef21e0",
         "type": "tab",
         "label": "tasmota",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -4624,14 +4624,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "3",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
+        "x": 180,
         "y": 180,
         "wires": [
             [
