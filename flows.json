@@ -160,15 +160,7 @@
     {
         "id": "10098f884d0b2060",
         "type": "tab",
-        "label": "Flujo 3",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "4ea4df881d487420",
-        "type": "tab",
-        "label": "Flujo 6",
+        "label": "google Ai",
         "disabled": false,
         "info": "",
         "env": []
@@ -1153,6 +1145,11 @@
         "id": "b77f6911b4520b69",
         "type": "gauth",
         "name": "node-redx@my-project-2026-483900.iam.gserviceaccount.com"
+    },
+    {
+        "id": "518681205c5b3ee3",
+        "type": "gemini-api-key",
+        "name": "node-red-oficina"
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -4547,16 +4544,81 @@
         ]
     },
     {
+        "id": "dcdb7ae7797cc482",
+        "type": "GSheet",
+        "z": "4b150ba7997bc74a",
+        "creds": "b77f6911b4520b69",
+        "method": "append",
+        "action": "",
+        "sheet": "1Wkmn5d-hphSDVuLPZoMUbMN8xsnnqtPrlZFblkt9x8Q",
+        "cells": "datos",
+        "flatten": true,
+        "name": "",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "3553077ac15b0e28"
+            ]
+        ]
+    },
+    {
+        "id": "22605dc5c462c19b",
+        "type": "inject",
+        "z": "4b150ba7997bc74a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "iso",
+        "payloadType": "date",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "dcdb7ae7797cc482"
+            ]
+        ]
+    },
+    {
+        "id": "3553077ac15b0e28",
+        "type": "debug",
+        "z": "4b150ba7997bc74a",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 180,
+        "wires": []
+    },
+    {
         "id": "82e009ef59f54558",
         "type": "gemini-generate-content",
-        "z": "4b150ba7997bc74a",
+        "z": "10098f884d0b2060",
         "name": "oficina",
         "apiKey": "bf1f38b1bcb46cbd",
         "modelSelection": "gemini-2.5-flash",
         "customModel": "",
         "customModelType": "str",
         "mode": "chat",
-        "prompt": "",
+        "prompt": "hola podrias decirme la suma de 3*4",
         "promptType": "str",
         "multimodalInputsData": "[]",
         "grounding": false,
@@ -4584,36 +4646,19 @@
         "responseFormat": "text",
         "schemaPropertiesData": "[]",
         "enumValues": "",
-        "x": 410,
-        "y": 100,
+        "x": 350,
+        "y": 160,
         "wires": [
-            [],
+            [
+                "e5cc7391082cf789"
+            ],
             []
         ]
     },
     {
-        "id": "dcdb7ae7797cc482",
-        "type": "GSheet",
-        "z": "4b150ba7997bc74a",
-        "creds": "b77f6911b4520b69",
-        "method": "append",
-        "action": "",
-        "sheet": "1Wkmn5d-hphSDVuLPZoMUbMN8xsnnqtPrlZFblkt9x8Q",
-        "cells": "datos",
-        "flatten": true,
-        "name": "",
-        "x": 390,
-        "y": 220,
-        "wires": [
-            [
-                "3553077ac15b0e28"
-            ]
-        ]
-    },
-    {
-        "id": "22605dc5c462c19b",
+        "id": "d7747372aa710aef",
         "type": "inject",
-        "z": "4b150ba7997bc74a",
+        "z": "10098f884d0b2060",
         "name": "",
         "props": [
             {
@@ -4624,26 +4669,147 @@
                 "vt": "str"
             }
         ],
-        "repeat": "3",
+        "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 180,
+        "x": 150,
+        "y": 140,
         "wires": [
             [
-                "dcdb7ae7797cc482"
+                "82e009ef59f54558"
             ]
         ]
     },
     {
-        "id": "3553077ac15b0e28",
+        "id": "e5cc7391082cf789",
         "type": "debug",
-        "z": "4b150ba7997bc74a",
-        "name": "debug 10",
+        "z": "10098f884d0b2060",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "inject_chat",
+        "type": "inject",
+        "z": "10098f884d0b2060",
+        "name": "Hola (Usuario A)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "sesion_usuario_A",
+        "payload": "Hola, me llamo Carlos",
+        "payloadType": "str",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "gemini_node"
+            ]
+        ]
+    },
+    {
+        "id": "inject_pregunta2",
+        "type": "inject",
+        "z": "10098f884d0b2060",
+        "name": "¿Cómo me llamo?",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "sesion_usuario_A",
+        "payload": "¿Recuerdas cómo me llamo?",
+        "payloadType": "str",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "gemini_node"
+            ]
+        ]
+    },
+    {
+        "id": "gemini_node",
+        "type": "gemini-generate-content",
+        "z": "10098f884d0b2060",
+        "name": "Gemini Chat",
+        "apiKey": "518681205c5b3ee3",
+        "modelSelection": "gemini-2.5-flash",
+        "customModel": "",
+        "customModelType": "str",
+        "mode": "chat",
+        "prompt": "Eres un asistente útil y amable.",
+        "promptType": "str",
+        "multimodalInputsData": "[]",
+        "grounding": false,
+        "temperature": "",
+        "temperatureType": "num",
+        "topP": "",
+        "topPType": "num",
+        "topK": "",
+        "topKType": "num",
+        "maxOutputTokens": "",
+        "maxOutputTokensType": "num",
+        "safetyHarassment": "",
+        "safetyHateSpeech": "",
+        "safetySexuallyExplicit": "",
+        "safetyDangerousContent": "",
+        "thinkingBudget": "",
+        "thinkingBudgetType": "num",
+        "thinkingLevel": "",
+        "thinkingLevelType": "str",
+        "includeThoughts": false,
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "outputProperty": "",
+        "passthroughProperties": false,
+        "responseFormat": "text",
+        "schemaPropertiesData": "[]",
+        "enumValues": "",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "debug_output"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "debug_output",
+        "type": "debug",
+        "z": "10098f884d0b2060",
+        "name": "Respuesta IA",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -4652,8 +4818,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 140,
+        "x": 630,
+        "y": 300,
         "wires": []
     }
 ]
