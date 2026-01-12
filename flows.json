@@ -3,7 +3,7 @@
         "id": "1b99cb21167619d4",
         "type": "tab",
         "label": "Flujo 1",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -11,7 +11,7 @@
         "id": "216a3e955e6e9f1e",
         "type": "tab",
         "label": "Interruptores",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -19,7 +19,7 @@
         "id": "dfe47cb10dd12990",
         "type": "tab",
         "label": "Graficos ",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -43,7 +43,7 @@
         "id": "1f94d9dd28469bca",
         "type": "tab",
         "label": "Mqtt",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -119,6 +119,14 @@
         "env": []
     },
     {
+        "id": "76c7d930ef7d7334",
+        "type": "tab",
+        "label": "Flujo 10",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "4070959c.e1715c",
         "type": "tab",
         "label": "keypad",
@@ -138,6 +146,14 @@
         "type": "tab",
         "label": "oficina snmp",
         "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e4bde213a939e611",
+        "type": "tab",
+        "label": "Flujo 11",
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -169,6 +185,22 @@
         "id": "528a6a21d90465f2",
         "type": "tab",
         "label": "Flujo 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2fde5e711cb74104",
+        "type": "tab",
+        "label": "Flujo 8",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bdf7e0f9fa708f82",
+        "type": "tab",
+        "label": "Flujo 9",
         "disabled": false,
         "info": "",
         "env": []
@@ -539,7 +571,7 @@
         "type": "ui-group",
         "name": "Group 3",
         "page": "1e6367e45d9fc8ae",
-        "width": 4,
+        "width": 5,
         "height": 1,
         "order": 1,
         "showTitle": true,
@@ -553,7 +585,7 @@
         "type": "ui-group",
         "name": "Group 4",
         "page": "1e6367e45d9fc8ae",
-        "width": 4,
+        "width": 5,
         "height": 1,
         "order": 2,
         "showTitle": true,
@@ -713,7 +745,7 @@
         "group": "2146960fc34ca53c",
         "name": "spacer",
         "order": 2,
-        "width": 1,
+        "width": 3,
         "height": 1,
         "className": ""
     },
@@ -1161,6 +1193,11 @@
     },
     {
         "id": "574ae5a4adef0d2b",
+        "type": "gemini-api-key",
+        "name": "node-red-oficina"
+    },
+    {
+        "id": "55f9641ad74e8df2",
         "type": "gemini-api-key",
         "name": "node-red-oficina"
     },
@@ -2150,7 +2187,7 @@
         ],
         "gridColorDefault": true,
         "width": 6,
-        "height": 8,
+        "height": 9,
         "className": "",
         "interpolation": "linear",
         "x": 450,
@@ -2477,7 +2514,7 @@
         "z": "1f94d9dd28469bca",
         "name": "",
         "group": "de2bfdf0214077bf",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "label": "",
@@ -2898,7 +2935,7 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "group": "de2bfdf0214077bf",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "",
@@ -2930,7 +2967,7 @@
         "z": "49868e9529ec35fd",
         "name": "",
         "group": "de2bfdf0214077bf",
-        "order": 3,
+        "order": 4,
         "width": 0,
         "height": 0,
         "label": "",
@@ -4627,7 +4664,7 @@
         "z": "10098f884d0b2060",
         "name": "oficina",
         "apiKey": "bf1f38b1bcb46cbd",
-        "modelSelection": "gemini-2.5-flash",
+        "modelSelection": "gemini-2.0-flash",
         "customModel": "",
         "customModelType": "str",
         "mode": "chat",
@@ -4856,7 +4893,7 @@
         "topic": "sesion_registro_01",
         "payload": "Hola, quiero registrarme",
         "payloadType": "str",
-        "x": 140,
+        "x": 180,
         "y": 80,
         "wires": [
             [
@@ -4885,7 +4922,7 @@
         "topic": "sesion_registro_01",
         "payload": "Me llamo Juan Pérez",
         "payloadType": "str",
-        "x": 130,
+        "x": 170,
         "y": 140,
         "wires": [
             [
@@ -4928,7 +4965,7 @@
         "z": "528a6a21d90465f2",
         "name": "Bot Recolector de Datos",
         "apiKey": "574ae5a4adef0d2b",
-        "modelSelection": "gemini-2.5-flash",
+        "modelSelection": "gemini-2.0-flash-lite",
         "customModel": "",
         "customModelType": "str",
         "mode": "chat",
@@ -4964,10 +5001,11 @@
         "y": 120,
         "wires": [
             [
-                "debug_chat",
-                "switch_check_json"
+                "debug_chat"
             ],
-            []
+            [
+                "switch_check_json"
+            ]
         ]
     },
     {
@@ -4988,31 +5026,6 @@
         "wires": []
     },
     {
-        "id": "switch_check_json",
-        "type": "switch",
-        "z": "528a6a21d90465f2",
-        "name": "¿Terminó el registro?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "status\": \"complete",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 660,
-        "y": 240,
-        "wires": [
-            [
-                "json_parser"
-            ]
-        ]
-    },
-    {
         "id": "json_parser",
         "type": "json",
         "z": "528a6a21d90465f2",
@@ -5020,8 +5033,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 910,
-        "y": 160,
+        "x": 990,
+        "y": 140,
         "wires": [
             [
                 "debug_datos_finales"
@@ -5043,6 +5056,321 @@
         "statusType": "auto",
         "x": 1190,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "switch_check_json",
+        "type": "switch",
+        "z": "528a6a21d90465f2",
+        "name": "¿Terminó el registro?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "status\": \"complete",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 180,
+        "wires": [
+            [
+                "json_parser"
+            ]
+        ]
+    },
+    {
+        "id": "reset_button",
+        "type": "inject",
+        "z": "2fde5e711cb74104",
+        "name": "🔴 REINICIAR FORMULARIO",
+        "props": [
+            {
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "manage_state"
+            ]
+        ]
+    },
+    {
+        "id": "user_input_1",
+        "type": "inject",
+        "z": "2fde5e711cb74104",
+        "name": "Usuario: 'Hola'",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola, quiero llenar el formulario",
+        "payloadType": "str",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "manage_state"
+            ]
+        ]
+    },
+    {
+        "id": "user_input_2",
+        "type": "inject",
+        "z": "2fde5e711cb74104",
+        "name": "Usuario: 'Juan Perez'",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Soy Juan Perez",
+        "payloadType": "str",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "manage_state"
+            ]
+        ]
+    },
+    {
+        "id": "user_input_3",
+        "type": "inject",
+        "z": "2fde5e711cb74104",
+        "name": "Usuario: 'juan@test.com'",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "mi correo es juan@test.com",
+        "payloadType": "str",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "manage_state"
+            ]
+        ]
+    },
+    {
+        "id": "manage_state",
+        "type": "function",
+        "z": "2fde5e711cb74104",
+        "name": "Gestor de Estado (Memoria)",
+        "func": "// 1. Recuperar o Inicializar el estado del formulario\nvar formData = flow.get('formData') || {\n    nombre: null,\n    apellido: null,\n    email: null,\n    telefono: null\n};\n\n// Si llega la señal de reset, borramos todo\nif (msg.reset === true) {\n    flow.set('formData', null);\n    msg.payload = \"[SISTEMA] Formulario reiniciado. Di 'Hola' para empezar.\";\n    return [null, msg]; // Salida 2 va al debug directo\n}\n\n// 2. Construir el Prompt Dinámico\n// Le damos a Gemini los datos actuales y le pedimos que actualice\nvar prompt = `\nACTÚA COMO UN MOTOR DE EXTRACCIÓN DE DATOS.\n\nESTADO ACTUAL DE LOS DATOS:\n${JSON.stringify(formData)}\n\nMENSAJE DEL USUARIO:\n\"${msg.payload}\"\n\nTU TAREA:\n1. Analiza el mensaje del usuario y extrae cualquier dato nuevo (Nombre, Apellido, Email, Telefono).\n2. Actualiza el JSON con los datos nuevos.\n3. Genera una respuesta amable para pedir el SIGUIENTE dato que falte (o confirmar si ya está todo).\n\nFORMATO DE SALIDA OBLIGATORIO (JSON puro):\n{\n  \"updated_data\": {\"nombre\": \"...\", \"apellido\": \"...\", \"email\": \"...\", \"telefono\": \"...\"},\n  \"bot_response\": \"Tu respuesta amable aquí...\",\n  \"is_complete\": true/false\n}\n`;\n\nmsg.payload = prompt;\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "gemini_logic"
+            ],
+            [
+                "debug_bot"
+            ]
+        ]
+    },
+    {
+        "id": "gemini_logic",
+        "type": "gemini-generate-content",
+        "z": "2fde5e711cb74104",
+        "name": "Gemini Brain",
+        "apiKey": "55f9641ad74e8df2",
+        "modelSelection": "gemini-2.5-flash",
+        "customModel": "",
+        "customModelType": "str",
+        "mode": "chat",
+        "prompt": "Eres un sistema lógico. Responde SIEMPRE en formato JSON.",
+        "promptType": "str",
+        "multimodalInputsData": "[]",
+        "grounding": false,
+        "temperature": "",
+        "temperatureType": "num",
+        "topP": "",
+        "topPType": "num",
+        "topK": "",
+        "topKType": "num",
+        "maxOutputTokens": "",
+        "maxOutputTokensType": "num",
+        "safetyHarassment": "",
+        "safetyHateSpeech": "",
+        "safetySexuallyExplicit": "",
+        "safetyDangerousContent": "",
+        "thinkingBudget": "",
+        "thinkingBudgetType": "num",
+        "thinkingLevel": "",
+        "thinkingLevelType": "str",
+        "includeThoughts": false,
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "outputProperty": "",
+        "passthroughProperties": false,
+        "responseFormat": "text",
+        "schemaPropertiesData": "[]",
+        "enumValues": "",
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [
+                "process_response"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "process_response",
+        "type": "function",
+        "z": "2fde5e711cb74104",
+        "name": "Guardar Datos y Responder",
+        "func": "// Intentamos limpiar la respuesta por si Gemini mete texto extra\nvar raw = msg.payload;\n// Buscamos el JSON entre llaves por seguridad\nvar jsonStart = raw.indexOf('{');\nvar jsonEnd = raw.lastIndexOf('}') + 1;\n\nif (jsonStart !== -1) {\n    var jsonString = raw.substring(jsonStart, jsonEnd);\n    try {\n        var result = JSON.parse(jsonString);\n        \n        // 1. Guardamos los datos actualizados en la memoria de Node-RED\n        flow.set('formData', result.updated_data);\n        \n        // 2. Preparamos la respuesta visual para el usuario\n        msg.payload = result.bot_response;\n        \n        // 3. Verificamos si terminó\n        if (result.is_complete) {\n             msg.payload += \" ✅ ¡DATOS COMPLETOS! Guardando...\";\n             // Aquí podrías añadir un nodo para guardar en Base de Datos\n        }\n        \n    } catch (e) {\n        msg.payload = \"Error procesando JSON de Gemini: \" + e.message;\n    }\n} else {\n    msg.payload = \"Gemini no respondió en JSON válido.\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 280,
+        "wires": [
+            [
+                "debug_bot"
+            ]
+        ]
+    },
+    {
+        "id": "debug_bot",
+        "type": "debug",
+        "z": "2fde5e711cb74104",
+        "name": "💬 Chat Bot",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "form_node_id",
+        "type": "ui-form",
+        "z": "bdf7e0f9fa708f82",
+        "name": "Datos para Gemini",
+        "group": "de2bfdf0214077bf",
+        "label": "Generador de Texto",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Tema del texto",
+                "key": "",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Tono / Estilo",
+                "key": "",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "": ""
+        },
+        "payload": "",
+        "submit": "Generar",
+        "cancel": "Cancelar",
+        "resetOnSubmit": false,
+        "topic": "",
+        "topicType": "str",
+        "splitLayout": false,
+        "className": "",
+        "dropdownOptions": [],
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "function_prep_gemini"
+            ]
+        ]
+    },
+    {
+        "id": "function_prep_gemini",
+        "type": "function",
+        "z": "bdf7e0f9fa708f82",
+        "name": "Crear Prompt Gemini",
+        "func": "// 1. Extraer los datos del formulario\nconst tema = msg.payload.tema;\nconst estilo = msg.payload.estilo;\n\n// 2. Crear la instrucción para la IA\n// Aquí diseñas cómo quieres pedirle las cosas a Gemini\nconst prompt = `Actúa como un experto redactor. \nEscribe un párrafo sobre: \"${tema}\".\nAsegúrate de usar un tono: ${estilo}.`;\n\n// 3. Preparar la salida para el nodo de Gemini\nmsg.payload = prompt;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "debug_node_fake_gemini"
+            ]
+        ]
+    },
+    {
+        "id": "debug_node_fake_gemini",
+        "type": "debug",
+        "z": "bdf7e0f9fa708f82",
+        "name": "Entrada a Gemini",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 120,
         "wires": []
     }
 ]
