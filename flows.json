@@ -206,6 +206,14 @@
         "env": []
     },
     {
+        "id": "304a1e617a093b1a",
+        "type": "tab",
+        "label": "Flujo 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -5372,5 +5380,50 @@
         "x": 590,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "d02ed7c7c4430983",
+        "type": "gemini-generate-content",
+        "z": "304a1e617a093b1a",
+        "name": "",
+        "apiKey": "",
+        "modelSelection": "gemini-2.5-flash",
+        "customModel": "",
+        "customModelType": "str",
+        "mode": "single",
+        "prompt": "",
+        "promptType": "str",
+        "multimodalInputsData": "[]",
+        "grounding": true,
+        "temperature": "",
+        "temperatureType": "num",
+        "topP": "",
+        "topPType": "num",
+        "topK": "",
+        "topKType": "num",
+        "maxOutputTokens": "",
+        "maxOutputTokensType": "num",
+        "safetyHarassment": "",
+        "safetyHateSpeech": "",
+        "safetySexuallyExplicit": "",
+        "safetyDangerousContent": "",
+        "thinkingBudget": "",
+        "thinkingBudgetType": "num",
+        "thinkingLevel": "",
+        "thinkingLevelType": "str",
+        "includeThoughts": false,
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "outputProperty": "payload",
+        "passthroughProperties": true,
+        "responseFormat": "text",
+        "schemaPropertiesData": "[]",
+        "enumValues": "",
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [],
+            []
+        ]
     }
 ]
