@@ -222,6 +222,14 @@
         "env": []
     },
     {
+        "id": "d7c4bde331db20e4",
+        "type": "tab",
+        "label": "Flujo 12",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -1216,6 +1224,13 @@
         "id": "55f9641ad74e8df2",
         "type": "gemini-api-key",
         "name": "node-red-oficina"
+    },
+    {
+        "id": "67ec69b98d51eff8",
+        "type": "nut-server",
+        "host": "127.0.0.1",
+        "port": 3493,
+        "useTls": false
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -5516,6 +5531,23 @@
         "timeout": 30000,
         "x": 290,
         "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46a0b8e847867aa9",
+        "type": "nut-ups",
+        "z": "d7c4bde331db20e4",
+        "name": "",
+        "server": "67ec69b98d51eff8",
+        "upsName": "ups",
+        "mode": "monitor",
+        "interval": 0,
+        "fetchOnDeploy": true,
+        "onlyOnChange": true,
+        "x": 390,
+        "y": 120,
         "wires": [
             []
         ]
