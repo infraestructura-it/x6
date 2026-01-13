@@ -230,6 +230,14 @@
         "env": []
     },
     {
+        "id": "4e7ca835a579c784",
+        "type": "tab",
+        "label": "Flujo 13",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -1227,6 +1235,13 @@
     },
     {
         "id": "67ec69b98d51eff8",
+        "type": "nut-server",
+        "host": "127.0.0.1",
+        "port": 3493,
+        "useTls": false
+    },
+    {
+        "id": "ca4bae6ef970076c",
         "type": "nut-server",
         "host": "127.0.0.1",
         "port": 3493,
@@ -3480,6 +3495,7 @@
         "z": "a20e512c16cd677e",
         "name": "Railway Switch",
         "triggertopic": "switcher",
+        "outputs": 5,
         "initializewith": "3",
         "payloadPropName": "payload",
         "translatorConfig": "",
@@ -5540,14 +5556,14 @@
         "type": "nut-ups",
         "z": "d7c4bde331db20e4",
         "name": "",
-        "server": "67ec69b98d51eff8",
+        "server": "ca4bae6ef970076c",
         "upsName": "ups",
         "mode": "monitor",
         "interval": 0,
         "fetchOnDeploy": true,
         "onlyOnChange": true,
-        "x": 390,
-        "y": 120,
+        "x": 370,
+        "y": 160,
         "wires": [
             []
         ]
