@@ -214,6 +214,14 @@
         "env": []
     },
     {
+        "id": "c965c2ee4453d7a4",
+        "type": "tab",
+        "label": "Flujo 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -5423,6 +5431,92 @@
         "y": 140,
         "wires": [
             [],
+            []
+        ]
+    },
+    {
+        "id": "e992edeb81155b07",
+        "type": "gemini-image-generate",
+        "z": "304a1e617a093b1a",
+        "name": "",
+        "apiKey": "bf1f38b1bcb46cbd",
+        "modelSelection": "gemini-2.5-flash-image",
+        "customModel": "",
+        "customModelType": "str",
+        "prompt": "",
+        "promptType": "str",
+        "numberOfImages": "1",
+        "numberOfImagesType": "num",
+        "aspectRatio": "1:1",
+        "outputFormat": "base64",
+        "saveDirectory": "",
+        "saveDirType": "str",
+        "mode": "generate",
+        "inputFile": "",
+        "inputFileType": "str",
+        "outputProperty": "payload",
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "responseModalities": "image",
+        "safetyHarassment": "BLOCK_MEDIUM_AND_ABOVE",
+        "safetyHateSpeech": "BLOCK_MEDIUM_AND_ABOVE",
+        "safetySexuallyExplicit": "BLOCK_MEDIUM_AND_ABOVE",
+        "safetyDangerousContent": "BLOCK_MEDIUM_AND_ABOVE",
+        "passthroughProperties": false,
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "bedeec6704cd83f2",
+        "type": "gemini-speech-generate",
+        "z": "304a1e617a093b1a",
+        "name": "",
+        "apiKey": "",
+        "model": "",
+        "text": "",
+        "textType": "str",
+        "speakerMode": "single",
+        "voiceName": "",
+        "speaker1Name": "",
+        "speaker1Voice": "",
+        "speaker2Name": "",
+        "speaker2Voice": "",
+        "outputFormat": "base64",
+        "saveDirectory": "",
+        "saveDirType": "str",
+        "filename": "",
+        "filenameType": "str",
+        "systemInstruction": "",
+        "systemInstructionType": "str",
+        "maxOutputTokens": "",
+        "maxOutputTokensType": "num",
+        "outputProperty": "payload",
+        "passthroughProperties": false,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0885dfdb2b7d5c4c",
+        "type": "mcp-tools",
+        "z": "c965c2ee4453d7a4",
+        "name": "",
+        "prompt": "",
+        "apiKey": "",
+        "mcpServers": "{\"mcpServers\": {\"default\": {\"command\": \"node\", \"args\": [\"/data/mcp-server-demo/build/index.js\"]}}}",
+        "mcpServerEnvs": "",
+        "sessionId": "default",
+        "timeout": 30000,
+        "x": 290,
+        "y": 60,
+        "wires": [
             []
         ]
     }
