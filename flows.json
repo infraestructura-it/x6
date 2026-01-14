@@ -5562,8 +5562,83 @@
         "interval": 0,
         "fetchOnDeploy": true,
         "onlyOnChange": true,
-        "x": 310,
+        "x": 350,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3181bac4f07f19c8",
+        "type": "snmp",
+        "z": "4e7ca835a579c784",
+        "host": "127.0.0.1",
+        "version": "1",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "",
+        "name": "",
+        "x": 300,
         "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4bb5b13833910fac",
+        "type": "snmp set",
+        "z": "4e7ca835a579c784",
+        "host": "127.0.0.1",
+        "version": "1",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "",
+        "varbinds": "",
+        "name": "",
+        "x": 310,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "faab3bef96364256",
+        "type": "snmp subtree",
+        "z": "4e7ca835a579c784",
+        "host": "127.0.0.1",
+        "version": "1",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "",
+        "name": "",
+        "x": 330,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de5b45de60a4452e",
+        "type": "snmp walker",
+        "z": "4e7ca835a579c784",
+        "host": "127.0.0.1",
+        "version": "1",
+        "timeout": 5,
+        "community": "public",
+        "auth": "noAuthNoPriv",
+        "authprot": "MD5",
+        "privprot": "DES",
+        "oids": "",
+        "name": "",
+        "x": 320,
+        "y": 280,
         "wires": [
             []
         ]
