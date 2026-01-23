@@ -1382,7 +1382,11 @@
         "width": "6",
         "height": "1",
         "order": 2,
-        "showTitle": true
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "d3c5570d66a4707f",
@@ -5695,8 +5699,8 @@
         "safetySexuallyExplicit": "BLOCK_MEDIUM_AND_ABOVE",
         "safetyDangerousContent": "BLOCK_MEDIUM_AND_ABOVE",
         "passthroughProperties": false,
-        "x": 350,
-        "y": 240,
+        "x": 370,
+        "y": 220,
         "wires": [
             [],
             []
@@ -6219,6 +6223,11 @@
         "name": "Procesar Switch 2",
         "func": "var switchState = msg.payload;\nvar switchId = 2;\n\nflow.set('switch2_state', switchState);\nflow.set('switch2_timestamp', new Date().toISOString());\n\nvar timerMinutes = flow.get('switch2_timer') || 0;\n\nif (switchState && timerMinutes > 0) {\n    var offTime = new Date(Date.now() + timerMinutes * 60000);\n    flow.set('switch2_offtime', offTime.toISOString());\n    \n    var timeoutId = setTimeout(function() {\n        node.send({\n            payload: false,\n            topic: 'switch2_auto_off'\n        });\n    }, timerMinutes * 60000);\n    \n    flow.set('switch2_timeout', timeoutId);\n} else if (!switchState) {\n    var timeoutId = flow.get('switch2_timeout');\n    if (timeoutId) {\n        clearTimeout(timeoutId);\n        flow.set('switch2_timeout', null);\n        flow.set('switch2_offtime', null);\n    }\n}\n\nvar mqttMsg = {\n    payload: switchState ? 'ON' : 'OFF',\n    topic: 'raspi/control/relay2'\n};\n\nvar tableMsg = { payload: 'update_table' };\nvar ledMsg = { payload: switchState, topic: 'led2' };\n\nreturn [mqttMsg, tableMsg, ledMsg];",
         "outputs": 3,
+        "timeout": "",
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 340,
         "y": 200,
         "wires": [
@@ -6302,7 +6311,7 @@
         "id": "2fd5ddbbf6190dca",
         "type": "ui-table",
         "z": "e055f5f687a366c2",
-        "group": "de29f61d9feac1aa",
+        "group": "65c9bdb667063b98",
         "name": "Tabla Estados",
         "label": "",
         "order": 1,
@@ -6342,8 +6351,8 @@
         "states": [],
         "showBorder": false,
         "showGlow": false,
-        "x": 780,
-        "y": 100,
+        "x": 770,
+        "y": 60,
         "wires": []
     },
     {
@@ -6361,8 +6370,8 @@
         "states": [],
         "showBorder": false,
         "showGlow": false,
-        "x": 780,
-        "y": 140,
+        "x": 810,
+        "y": 120,
         "wires": []
     },
     {
@@ -6538,6 +6547,7 @@
         "onceDelay": "1",
         "topic": "",
         "payload": "update_table",
+        "payloadType": "str",
         "x": 150,
         "y": 400,
         "wires": [
