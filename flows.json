@@ -5741,7 +5741,9 @@
         "x": 330,
         "y": 100,
         "wires": [
-            [],
+            [
+                "gpio_out_relay1"
+            ],
             [
                 "mqtt_status_out"
             ]
@@ -5847,6 +5849,11 @@
         "topic": "",
         "qos": "1",
         "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
         "broker": "mqtt_broker",
         "x": 610,
         "y": 400,
