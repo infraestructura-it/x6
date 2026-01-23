@@ -5833,6 +5833,11 @@
         "name": "Control Todos los Relays",
         "func": "var command = msg.payload;\nvar state = 0;\n\nif (command === 'ON' || command === 'ALL_ON') {\n    state = 1;\n} else if (command === 'OFF' || command === 'ALL_OFF') {\n    state = 0;\n}\n\n// Crear mensajes para los primeros 24 relays\nvar messages = [];\nfor (var i = 1; i <= 24; i++) {\n    messages.push({\n        payload: state ? 'ON' : 'OFF',\n        topic: 'raspi/control/relay' + i\n    });\n}\n\nreturn [messages];",
         "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 360,
         "y": 400,
         "wires": [
