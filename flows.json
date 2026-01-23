@@ -277,6 +277,13 @@
         "info": "Flow para controlar 24 relés en Raspberry Pi vía MQTT y GPIO"
     },
     {
+        "id": "e055f5f687a366c2",
+        "type": "tab",
+        "label": "Dashboard Temporizadores",
+        "disabled": false,
+        "info": "Dashboard 2.0 con 10 switches, temporizadores y visualización"
+    },
+    {
         "id": "759b8c84b09295a3",
         "type": "subflow",
         "name": "Subflow leds",
@@ -568,7 +575,7 @@
                 "cols": 12
             }
         ],
-        "order": 1,
+        "order": 3,
         "className": "",
         "visible": true,
         "disabled": false
@@ -632,7 +639,7 @@
                 "cols": "12"
             }
         ],
-        "order": 2,
+        "order": 4,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -696,7 +703,7 @@
                 "cols": 12
             }
         ],
-        "order": 3,
+        "order": 5,
         "className": "",
         "visible": true,
         "disabled": false
@@ -760,7 +767,7 @@
                 "cols": "12"
             }
         ],
-        "order": 4,
+        "order": 6,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -871,7 +878,7 @@
                 "cols": "12"
             }
         ],
-        "order": 5,
+        "order": 7,
         "className": "",
         "visible": "true",
         "disabled": "false"
@@ -1316,6 +1323,130 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "21a0af8f096febbe",
+        "type": "ui-page",
+        "name": "Control de Relés",
+        "ui": "a65f1e263306255b",
+        "path": "/control",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ac7a2988612b2fd0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "52d46282109f9674",
+        "type": "ui-group",
+        "name": "Switches de Control",
+        "page": "21a0af8f096febbe",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "65c9bdb667063b98",
+        "type": "ui-group",
+        "name": "Tabla de Estados",
+        "page": "21a0af8f096febbe",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": true
+    },
+    {
+        "id": "d3c5570d66a4707f",
+        "type": "ui-group",
+        "name": "Indicadores LED",
+        "page": "21a0af8f096febbe",
+        "width": "12",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "030f0dcda1a09666",
+        "type": "ui-page",
+        "name": "Page Name",
+        "ui": "a65f1e263306255b",
+        "path": "/page7",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "ac7a2988612b2fd0",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "de29f61d9feac1aa",
+        "type": "ui-group",
+        "name": "Group Name",
+        "page": "030f0dcda1a09666",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "ddfa6ad641de26b2",
@@ -5880,6 +6011,7 @@
         "onceDelay": "5",
         "topic": "",
         "payload": "",
+        "payloadType": "date",
         "x": 150,
         "y": 500,
         "wires": [
@@ -5942,5 +6074,476 @@
         "x": 560,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "9c6e6176c6e520e3",
+        "type": "ui-switch",
+        "z": "e055f5f687a366c2",
+        "name": "Switch 1",
+        "label": "Relay 1",
+        "group": "52d46282109f9674",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "switch1",
+        "topicType": "str",
+        "className": "",
+        "layout": "",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "dc30f3e5c1f89a14"
+            ]
+        ]
+    },
+    {
+        "id": "dc30f3e5c1f89a14",
+        "type": "function",
+        "z": "e055f5f687a366c2",
+        "name": "Procesar Switch 1",
+        "func": "// Obtener estado del switch\nvar switchState = msg.payload;\nvar switchId = 1;\n\n// Guardar estado en contexto\nflow.set('switch1_state', switchState);\nflow.set('switch1_timestamp', new Date().toISOString());\n\n// Si está encendido, obtener tiempo del temporizador\nvar timerMinutes = flow.get('switch1_timer') || 0;\n\nif (switchState && timerMinutes > 0) {\n    // Calcular tiempo de apagado\n    var offTime = new Date(Date.now() + timerMinutes * 60000);\n    flow.set('switch1_offtime', offTime.toISOString());\n    \n    // Programar apagado automático\n    var timeoutId = setTimeout(function() {\n        node.send({\n            payload: false,\n            topic: 'switch1_auto_off'\n        });\n    }, timerMinutes * 60000);\n    \n    flow.set('switch1_timeout', timeoutId);\n} else if (!switchState) {\n    // Si se apaga manualmente, cancelar temporizador\n    var timeoutId = flow.get('switch1_timeout');\n    if (timeoutId) {\n        clearTimeout(timeoutId);\n        flow.set('switch1_timeout', null);\n        flow.set('switch1_offtime', null);\n    }\n}\n\n// Publicar a MQTT\nvar mqttMsg = {\n    payload: switchState ? 'ON' : 'OFF',\n    topic: 'raspi/control/relay1'\n};\n\n// Actualizar tabla\nvar tableMsg = {\n    payload: 'update_table'\n};\n\n// Actualizar LED\nvar ledMsg = {\n    payload: switchState,\n    topic: 'led1'\n};\n\nreturn [mqttMsg, tableMsg, ledMsg];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "0f2dc9a920175c60"
+            ],
+            [
+                "c9d2ebb2e20fde66"
+            ],
+            [
+                "a945f241579d2d31"
+            ]
+        ]
+    },
+    {
+        "id": "a0c4dd496fba81ee",
+        "type": "ui-slider",
+        "z": "e055f5f687a366c2",
+        "group": "52d46282109f9674",
+        "name": "Timer 1",
+        "label": "Temporizador 1 (min)",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "outs": "end",
+        "topic": "timer1",
+        "topicType": "str",
+        "showTicks": "false",
+        "min": 0,
+        "max": 120,
+        "step": 5,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "5adc9ac1bb75e11d"
+            ]
+        ]
+    },
+    {
+        "id": "5adc9ac1bb75e11d",
+        "type": "function",
+        "z": "e055f5f687a366c2",
+        "name": "Guardar Timer 1",
+        "func": "flow.set('switch1_timer', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "x": 340,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee325662dffc25af",
+        "type": "ui-switch",
+        "z": "e055f5f687a366c2",
+        "name": "Switch 2",
+        "label": "Relay 2",
+        "group": "52d46282109f9674",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "switch2",
+        "topicType": "str",
+        "className": "",
+        "layout": "",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "c7fab1f23a0d3d2d"
+            ]
+        ]
+    },
+    {
+        "id": "c7fab1f23a0d3d2d",
+        "type": "function",
+        "z": "e055f5f687a366c2",
+        "name": "Procesar Switch 2",
+        "func": "var switchState = msg.payload;\nvar switchId = 2;\n\nflow.set('switch2_state', switchState);\nflow.set('switch2_timestamp', new Date().toISOString());\n\nvar timerMinutes = flow.get('switch2_timer') || 0;\n\nif (switchState && timerMinutes > 0) {\n    var offTime = new Date(Date.now() + timerMinutes * 60000);\n    flow.set('switch2_offtime', offTime.toISOString());\n    \n    var timeoutId = setTimeout(function() {\n        node.send({\n            payload: false,\n            topic: 'switch2_auto_off'\n        });\n    }, timerMinutes * 60000);\n    \n    flow.set('switch2_timeout', timeoutId);\n} else if (!switchState) {\n    var timeoutId = flow.get('switch2_timeout');\n    if (timeoutId) {\n        clearTimeout(timeoutId);\n        flow.set('switch2_timeout', null);\n        flow.set('switch2_offtime', null);\n    }\n}\n\nvar mqttMsg = {\n    payload: switchState ? 'ON' : 'OFF',\n    topic: 'raspi/control/relay2'\n};\n\nvar tableMsg = { payload: 'update_table' };\nvar ledMsg = { payload: switchState, topic: 'led2' };\n\nreturn [mqttMsg, tableMsg, ledMsg];",
+        "outputs": 3,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "0f2dc9a920175c60"
+            ],
+            [
+                "c9d2ebb2e20fde66"
+            ],
+            [
+                "6349c65e9eb7d419"
+            ]
+        ]
+    },
+    {
+        "id": "87028d2452737f69",
+        "type": "ui-slider",
+        "z": "e055f5f687a366c2",
+        "group": "52d46282109f9674",
+        "name": "Timer 2",
+        "label": "Temporizador 2 (min)",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "topic": "timer2",
+        "topicType": "str",
+        "showTicks": "false",
+        "min": 0,
+        "max": 120,
+        "step": 5,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": false,
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "234b347514be5a6f"
+            ]
+        ]
+    },
+    {
+        "id": "234b347514be5a6f",
+        "type": "function",
+        "z": "e055f5f687a366c2",
+        "name": "Guardar Timer 2",
+        "func": "flow.set('switch2_timer', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9d2ebb2e20fde66",
+        "type": "function",
+        "z": "e055f5f687a366c2",
+        "name": "Actualizar Tabla",
+        "func": "var tableData = [];\n\nfor (var i = 1; i <= 10; i++) {\n    var state = flow.get('switch' + i + '_state') || false;\n    var timer = flow.get('switch' + i + '_timer') || 0;\n    var timestamp = flow.get('switch' + i + '_timestamp') || '-';\n    var offtime = flow.get('switch' + i + '_offtime');\n    \n    var remainingTime = '-';\n    if (state && offtime) {\n        var now = new Date();\n        var off = new Date(offtime);\n        var diffMs = off - now;\n        if (diffMs > 0) {\n            var minutes = Math.floor(diffMs / 60000);\n            var seconds = Math.floor((diffMs % 60000) / 1000);\n            remainingTime = minutes + 'm ' + seconds + 's';\n        }\n    }\n    \n    tableData.push({\n        relay: 'Relay ' + i,\n        estado: state ? '🟢 ON' : '⚫ OFF',\n        temporizador: timer + ' min',\n        tiempo_restante: remainingTime,\n        ultima_actualizacion: timestamp ? new Date(timestamp).toLocaleTimeString() : '-'\n    });\n}\n\nmsg.payload = tableData;\nreturn msg;",
+        "outputs": 1,
+        "x": 340,
+        "y": 540,
+        "wires": [
+            [
+                "2fd5ddbbf6190dca"
+            ]
+        ]
+    },
+    {
+        "id": "2fd5ddbbf6190dca",
+        "type": "ui-table",
+        "z": "e055f5f687a366c2",
+        "group": "de29f61d9feac1aa",
+        "name": "Tabla Estados",
+        "label": "",
+        "order": 1,
+        "width": "12",
+        "height": "6",
+        "maxrows": 10,
+        "passthru": false,
+        "autocols": true,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "none",
+        "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
+        "className": "",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "a945f241579d2d31"
+            ]
+        ]
+    },
+    {
+        "id": "a945f241579d2d31",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 1",
+        "group": "d3c5570d66a4707f",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "label": "R1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "6349c65e9eb7d419",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 2",
+        "group": "d3c5570d66a4707f",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "label": "R2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "03ba33f1a54db226",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 3",
+        "group": "d3c5570d66a4707f",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "label": "R3",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5ec4f9137e1424ce",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 4",
+        "group": "d3c5570d66a4707f",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "label": "R4",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8edc4bc7737050b2",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 5",
+        "group": "d3c5570d66a4707f",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "label": "R5",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e58b9735b1defedc",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 6",
+        "group": "d3c5570d66a4707f",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "label": "R6",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7c1f06f3e45a800e",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 7",
+        "group": "d3c5570d66a4707f",
+        "order": 7,
+        "width": "1",
+        "height": "1",
+        "label": "R7",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a30e067b20815c7d",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 8",
+        "group": "d3c5570d66a4707f",
+        "order": 8,
+        "width": "1",
+        "height": "1",
+        "label": "R8",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "88477fc99c0edf72",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 9",
+        "group": "d3c5570d66a4707f",
+        "order": 9,
+        "width": "1",
+        "height": "1",
+        "label": "R9",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "47fe64d9a1ccd3f6",
+        "type": "ui-led",
+        "z": "e055f5f687a366c2",
+        "name": "LED 10",
+        "group": "d3c5570d66a4707f",
+        "order": 10,
+        "width": "1",
+        "height": "1",
+        "label": "R10",
+        "labelPlacement": "left",
+        "states": [],
+        "showBorder": false,
+        "showGlow": false,
+        "x": 780,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0f2dc9a920175c60",
+        "type": "mqtt out",
+        "z": "e055f5f687a366c2",
+        "name": "MQTT Publish",
+        "topic": "",
+        "qos": "1",
+        "retain": "true",
+        "broker": "mqtt_broker",
+        "x": 780,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5264d07c67a18a45",
+        "type": "inject",
+        "z": "e055f5f687a366c2",
+        "name": "Refrescar cada 1s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "update_table",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "c9d2ebb2e20fde66"
+            ]
+        ]
     }
 ]
